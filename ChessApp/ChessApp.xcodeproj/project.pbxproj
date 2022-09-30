@@ -19,6 +19,7 @@
 		CDD56EBF28E20A7B00E7BB20 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD56EBE28E20A7B00E7BB20 /* Board.swift */; };
 		CDD56EC128E20C7F00E7BB20 /* Pawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD56EC028E20C7F00E7BB20 /* Pawn.swift */; };
 		CDD56EC328E70B8F00E7BB20 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD56EC228E70B8F00E7BB20 /* Piece.swift */; };
+		CDD56EC528E70D5800E7BB20 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD56EC428E70D5800E7BB20 /* Position.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		CDD56EBE28E20A7B00E7BB20 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		CDD56EC028E20C7F00E7BB20 /* Pawn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pawn.swift; sourceTree = "<group>"; };
 		CDD56EC228E70B8F00E7BB20 /* Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
+		CDD56EC428E70D5800E7BB20 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				CDD56EBE28E20A7B00E7BB20 /* Board.swift */,
 				CDD56EC028E20C7F00E7BB20 /* Pawn.swift */,
 				CDD56EC228E70B8F00E7BB20 /* Piece.swift */,
+				CDD56EC428E70D5800E7BB20 /* Position.swift */,
 			);
 			path = Chess;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD56EC528E70D5800E7BB20 /* Position.swift in Sources */,
 				CDD56E9228E2096500E7BB20 /* ViewController.swift in Sources */,
 				CDD56E8E28E2096500E7BB20 /* AppDelegate.swift in Sources */,
 				CDD56EC328E70B8F00E7BB20 /* Piece.swift in Sources */,

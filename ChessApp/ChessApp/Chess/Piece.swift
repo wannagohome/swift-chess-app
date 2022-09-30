@@ -15,8 +15,3 @@ enum `Type` {
     case white
     case black
 }
-
-struct Position {
-    var row: String
-    var column: String
-}
