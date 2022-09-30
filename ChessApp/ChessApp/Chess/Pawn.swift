@@ -5,24 +5,10 @@
 //  Created by Jinho Jang on 2022/09/27.
 //
 
-protocol Pawnable {
-    func moveablePosition() -> String?
-}
-
-final class Pawn: Pawnable {
+final class Pawn: Piece {
     
-    enum `Type` {
-        case white
-        case black
-    }
-    
-    struct Position {
-        var row: String
-        var column: String
-    }
-    
-    private var currentPosition: Position
-    private let type: `Type`
+    var type: `Type`
+    var currentPosition: Position
     private let minRank: String
     private let maxRank: String
     
