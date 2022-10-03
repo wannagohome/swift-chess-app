@@ -18,7 +18,7 @@ final class Bishop: Piece {
         self.type = type
     }
     
-    func moveablePosition() -> String? {
+    func moveablePosition() -> [Position] {
         var result: Set<Position> = []
         
         let topLeft = min(currentPosition.rank.distanceFromMax, currentPosition.file.distanceFromMin)
@@ -49,6 +49,6 @@ final class Bishop: Piece {
             }
         }
         
-        return result.description
+        return Array(result)
     }
 }

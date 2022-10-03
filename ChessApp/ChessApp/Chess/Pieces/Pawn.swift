@@ -18,16 +18,15 @@ final class Pawn: Piece {
         self.type = type
     }
     
-    func moveablePosition() -> String? {
+    func moveablePosition() -> [Position] {
         guard currentPosition.rank != Rank.min
                 && currentPosition.rank != Rank.max else {
-            return nil
+            return []
         }
         
-        var nextRank = currentPosition.rank.value
-        if type == .white { nextRank -= 1 }
-        if type == .black { nextRank += 1 }
+        if type == .white { return [currentPosition.goUp()] }
+        if type == .black { return [currentPosition.goDown()] }
         
-        return currentPosition.file.value + "\(nextRank)"
+        return []
     }
 }

@@ -5,13 +5,10 @@
 //  Created by Jinho Jang on 2022/09/30.
 //
 
-struct Position: Equatable, Hashable, CustomStringConvertible {
+struct Position: Hashable {
+
     var file: File
     var rank: Rank
-    
-    var description: String {
-        "\(file.value)\(rank.value)"
-    }
     
     func goUp(_ k: Int = 1) -> Position {
         var position = self
@@ -35,6 +32,18 @@ struct Position: Equatable, Hashable, CustomStringConvertible {
         var position = self
         position.file.value = String(UnicodeScalar(Character(file.value).asciiValue! + k))
         return position
+    }
+}
+
+extension Position: Comparable {
+    static func < (lhs: Position, rhs: Position) -> Bool {
+        lhs.description < rhs.description
+    }
+}
+
+extension Position: CustomStringConvertible {
+    var description: String {
+        "\(file.value)\(rank.value)"
     }
 }
 

@@ -8,7 +8,7 @@
 protocol Piece {
     var type: `Type` { get }
     var currentPosition: Position { get set }
-    func moveablePosition() -> String?
+    func moveablePosition() -> [Position]
 }
 
 enum `Type` {
