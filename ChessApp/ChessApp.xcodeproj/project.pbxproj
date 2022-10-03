@@ -20,6 +20,7 @@
 		CDD56EC128E20C7F00E7BB20 /* Pawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD56EC028E20C7F00E7BB20 /* Pawn.swift */; };
 		CDD56EC328E70B8F00E7BB20 /* Piece.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD56EC228E70B8F00E7BB20 /* Piece.swift */; };
 		CDD56EC528E70D5800E7BB20 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD56EC428E70D5800E7BB20 /* Position.swift */; };
+		CDD56EC728E9B3C100E7BB20 /* Bishop.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD56EC628E9B3C100E7BB20 /* Bishop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		CDD56EC028E20C7F00E7BB20 /* Pawn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pawn.swift; sourceTree = "<group>"; };
 		CDD56EC228E70B8F00E7BB20 /* Piece.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Piece.swift; sourceTree = "<group>"; };
 		CDD56EC428E70D5800E7BB20 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		CDD56EC628E9B3C100E7BB20 /* Bishop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bishop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,12 +141,21 @@
 		CDD56EBD28E20A6F00E7BB20 /* Chess */ = {
 			isa = PBXGroup;
 			children = (
+				CDD56EC828E9B3CB00E7BB20 /* Pieces */,
 				CDD56EBE28E20A7B00E7BB20 /* Board.swift */,
-				CDD56EC028E20C7F00E7BB20 /* Pawn.swift */,
-				CDD56EC228E70B8F00E7BB20 /* Piece.swift */,
 				CDD56EC428E70D5800E7BB20 /* Position.swift */,
 			);
 			path = Chess;
+			sourceTree = "<group>";
+		};
+		CDD56EC828E9B3CB00E7BB20 /* Pieces */ = {
+			isa = PBXGroup;
+			children = (
+				CDD56EC028E20C7F00E7BB20 /* Pawn.swift */,
+				CDD56EC628E9B3C100E7BB20 /* Bishop.swift */,
+				CDD56EC228E70B8F00E7BB20 /* Piece.swift */,
+			);
+			path = Pieces;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +293,7 @@
 				CDD56E9228E2096500E7BB20 /* ViewController.swift in Sources */,
 				CDD56E8E28E2096500E7BB20 /* AppDelegate.swift in Sources */,
 				CDD56EC328E70B8F00E7BB20 /* Piece.swift in Sources */,
+				CDD56EC728E9B3C100E7BB20 /* Bishop.swift in Sources */,
 				CDD56EBF28E20A7B00E7BB20 /* Board.swift in Sources */,
 				CDD56EC128E20C7F00E7BB20 /* Pawn.swift in Sources */,
 				CDD56E9028E2096500E7BB20 /* SceneDelegate.swift in Sources */,
