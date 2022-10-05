@@ -10,6 +10,17 @@ struct Position: Hashable {
     var file: File
     var rank: Rank
     
+    init(_ str: String) {
+        if str.count != 2 { fatalError() }
+        file = File(String(str.dropFirst()))
+        rank = Rank(Int(String(str.dropLast()))!)
+    }
+    
+    init(file: File, rank: Rank) {
+        self.file = file
+        self.rank = rank
+    }
+    
     func goUp(_ k: Int = 1) -> Position {
         var position = self
         position.rank.value += k
@@ -82,7 +93,7 @@ struct Rank: Comparable, Hashable {
 }
 
 
-struct File: Comparable, Hashable {
+struct File: Hashable {
     
     static let min: File = File("A")
     static let max: File = File("H")
@@ -103,15 +114,28 @@ struct File: Comparable, Hashable {
         self._value = value
     }
     
-    static func < (lhs: File, rhs: File) -> Bool {
-        lhs.value < rhs.value
-    }
-    
     static func - (lhs: File, rhs: File) -> Int {
         Int(Character(lhs.value).asciiValue! - Character(rhs.value).asciiValue!)
     }
     
     private func clamp(_ value: String, in limits: ClosedRange<String>) -> String {
         return Swift.min(Swift.max(value, limits.lowerBound), limits.upperBound)
+    }
+}
+
+
+extension File: Comparable {
+    static func < (lhs: File, rhs: File) -> Bool {
+        lhs.value < rhs.value
+    }
+}
+
+extension File: Strideable {
+    func advanced(by n: Int) -> File {
+        File(String(UnicodeScalar(Character(self.value).asciiValue! + UInt8(n))))
+    }
+    
+    func distance(to other: File) -> Int {
+        self - other
     }
 }
